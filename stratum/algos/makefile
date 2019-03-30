@@ -21,12 +21,14 @@ SOURCES=lyra2re.c lyra2v2.c Lyra2.c lyra2z.c Lyra2-z.c lyra2re.c lyra2re3.c lyra
 	blake2/blake2b.c argon2d/argon2.c argon2d/core.c argon2d/encoding.c argon2d/opt.c argon2d/thread.c \
 	hive.c pomelo.c hex.c argon2m.c argon2d.c geek.c balloon.c \
 	phi.c phi2.c polytimos.c rainforest.c skunk.c sib.c veltor.c gost.c aergo.c x20r.c x21s.c lbk3.c pipehash.c \
-	yespower.c yespower-opt.c sha256-P.c dedal.c phi1612.c bcd.c \
+	yespower.c yespower-opt.c sha256-P.c dedal.c phi1612.c bcd.c sk1024.cpp \
 	binarium_hash_v1.c binarium_hash_v1/hashing/streebog/table/stribog.c binarium_hash_v1/hashing/whirlpool/whirlpool.c \
 	binarium_hash_v1/hashing/whirlpool/byte_order.c binarium_hash_v1/encryption/gost2015_kuznechik/SIMD.c \
 	binarium_hash_v1/encryption/gost2015_kuznechik/SIMD_tables.c binarium_hash_v1/encryption/gost2015_kuznechik/shared/tables.c \
-	binarium_hash_v1/encryption/three_fish/libskein_skein.cc binarium_hash_v1/encryption/salsa20/salsa20.c
-
+	binarium_hash_v1/encryption/three_fish/libskein_skein.cc binarium_hash_v1/encryption/salsa20/salsa20.c \
+	sk1024/Keccak-compact64.c sk1024/KeccakDuplex.c sk1024/KeccakHash.c sk1024/KeccakSponge.c sk1024/skein.cpp sk1024/skein_block.cpp
+	
+	
 OBJECTS=$(SOURCES:%.c=%.o) $(SOURCES:%.cpp=%.o) $(SOURCES:%.cc=%.o)
 OUTPUT=libalgos.a
 
@@ -49,3 +51,4 @@ clean:
 	rm -f ar2/*.o
 	rm -f blake2/*.o
 	rm -f SWIFFTX/*.o
+	rm -f sk1024/*.o
