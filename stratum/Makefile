@@ -58,6 +58,8 @@ clean:
 	rm -f sha3/*.o
 	rm -f sha3/*.a
 	rm -f algos/ar2/*.o
+	rm -f algos/sk1024/*.o
+
 
 install: clean all
 	strip -s stratum
