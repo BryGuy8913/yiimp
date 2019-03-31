@@ -204,6 +204,7 @@ void sha256_double_hash_hex(const char *input, char *output, unsigned int len);
 #include "algos/sha256q.h"
 #include "algos/sha256t.h"
 #include "algos/sib.h"
+#include "algos/sk1024.h"
 #include "algos/skein.h"
 #include "algos/skein2.h"
 #include "algos/skunk.h"
