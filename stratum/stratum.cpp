@@ -172,6 +172,7 @@ YAAMP_ALGO g_algos[] =
 	{"sha256q", sha256q_hash, 1, 0, 0}, // sha256 4x
 	{"sha256t", sha256t_hash, 1, 0, 0}, // sha256 3x
 	{"sib", sib_hash, 1, 0, 0},
+	{"sk1024", sk1024_hash, 1, 0, 0},
 	{"skein", skein_hash, 1, 0, 0},
 	{"skein2", skein2_hash, 1, 0, 0},
 	{"skunk", skunk_hash, 1, 0, 0},
