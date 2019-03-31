@@ -7,7 +7,13 @@
 #include "sk1024/skein.h"
 //#include "../LLC/hash/SK.h"
 #include "sk1024/uint1024.h"
-#include "sk1024/KeccakHash.h"
+
+
+//if sk1024 runs as C++ and not C, tell the compiler explicitly that KeccakHash is C
+extern "C" {
+    #include "sk1024/KeccakHash.h"
+}
+
 
 #include "common.h"
 
